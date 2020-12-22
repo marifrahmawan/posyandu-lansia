@@ -96,10 +96,10 @@
 					<td><?php echo $pemeriksaan->perawatan_tambahan ?></td>
 				</tr>
 				<?php 
-				$host = @mysql_connect("localhost","root","");
-				$db = mysql_select_db("lansia");
-				$query = mysql_query("SELECT * FROM data_penyakit WHERE nama_penyakit = '$pemeriksaan->diagnosa'");
-				while ($row = mysql_fetch_array($query)) {
+				$host = @mysqli_connect("localhost","root","");
+				$db = mysqli_select_db($host, "lansia");
+				$query = mysqli_query($host, "SELECT * FROM data_penyakit WHERE nama_penyakit = '$pemeriksaan->diagnosa'");
+				while ($row = mysqli_fetch_array($query)) {
 				?>
 				<tr>
 					<td width="10%">Anjuran </td>

@@ -46,10 +46,10 @@
 				<div class="row">
 					<div class="col-lg-4 col-xs-6">
 						<?php
-						$host = @mysql_connect("localhost", "root", "");
-						$db = mysql_select_db("lansia");
-						$query = mysql_query("SELECT * FROM data_lansia");
-						$count = mysql_num_rows($query);
+						$host = @mysqli_connect("localhost", "root", "");
+						$db = mysqli_select_db($host,"lansia");
+						$query = mysqli_query($host, "SELECT * FROM data_lansia");
+						$count = mysqli_num_rows($query);
 						?>
 						<!-- small box -->
 						<div class="small-box bg-aqua">
@@ -67,10 +67,10 @@
 
 					<div class="col-lg-4 col-xs-6">
 						<?php
-						$host = @mysql_connect("localhost", "root", "");
-						$db = mysql_select_db("lansia");
-						$query = mysql_query("SELECT * FROM pemeriksaan");
-						$count = mysql_num_rows($query);
+						$host = @mysqli_connect("localhost", "root", "");
+						$db = mysqli_select_db($host,"lansia");
+						$query = mysqli_query($host, "SELECT * FROM pemeriksaan");
+						$count = mysqli_num_rows($query);
 						?>
 						<!-- small box -->
 						<div class="small-box bg-green">
@@ -88,10 +88,10 @@
 
 					<div class="col-lg-4 col-xs-6">
 						<?php
-						$host = @mysql_connect("localhost", "root", "");
-						$db = mysql_select_db("lansia");
-						$query = mysql_query("SELECT * FROM data_penyakit");
-						$count = mysql_num_rows($query);
+						$host = @mysqli_connect("localhost", "root", "");
+						$db = mysqli_select_db($host, "lansia");
+						$query = mysqli_query($host, "SELECT * FROM data_penyakit");
+						$count = mysqli_num_rows($query);
 						?>
 						<!-- small box -->
 						<div class="small-box bg-orange">
